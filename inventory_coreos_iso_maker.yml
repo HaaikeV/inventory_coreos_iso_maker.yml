@@ -1,0 +1,35 @@
+all:
+  children:
+    bootstrap:
+      hosts:
+        bootstrap.${CLUSTERID}.openshift.example.co.za:
+          dhcp: false
+          ipv4: ${BOOTSTRAP_IP}
+
+    master:
+      hosts:
+        master0.${CLUSTERID}.openshift.example.co.za:
+          dhcp: false
+          ipv4: ${MASTER001_IP}
+
+        master1.${CLUSTERID}.openshift.example.co.za:
+          dhcp: false
+          ipv4: ${MASTER002_IP}
+
+        master2.${CLUSTERID}.openshift.example.co.za:
+           dhcp: false
+           ipv4: ${MASTER003_IP}
+
+    worker:
+      hosts:
+        worker0.${CLUSTERID}.openshift.example.co.za:
+          dhcp: false
+          ipv4: ${WORKER001_IP}
+
+        worker1.${CLUSTERID}.openshift.example.co.za:
+          dhcp: false
+          ipv4: ${WORKER002_IP}
+
+        worker2.${CLUSTERID}.openshift.example.co.za:
+          dhcp: false
+          ipv4: ${WORKER003_IP} 
